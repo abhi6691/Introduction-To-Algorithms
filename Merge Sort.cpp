@@ -49,22 +49,16 @@ void merge(vi &A, int l, int m, int r) // 0 0 1
 
 	//printf("Done with while loop\n");
 
-	if (li == L.size())
+	while (ri < R.size())
 	{
-		while (ri < R.size())
-		{
-			A[i] = R[ri];
-			ri++; i++;
-		}
+		A[i] = R[ri];
+		ri++; i++;
 	}
 
-	if (ri == R.size())
+	while (li < L.size())
 	{
-		while (li < L.size())
-		{
-			A[i] = L[li];
-			li++; i++;
-		}
+		A[i] = L[li];
+		li++; i++;
 	}
 
 	//printf("Done with if checks\n");
